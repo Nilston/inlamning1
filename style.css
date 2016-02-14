@@ -94,6 +94,24 @@ article>img{
 #welcome{
   height: 10%;
 }
+/*Style 'show menu' label button and hide it by default*/
+.show-menu {
+	background: #32B07A;
+	text-align: center;
+	padding: 10px 0;
+	display: none;
+}
+
+/*Hide checkbox*/
+input[type=checkbox]{
+    display: none;
+}
+
+/*Show menu when invisible checkbox is checked*/
+input[type=checkbox]:checked ~ #navigation{
+    display: block;
+    background-color: #FFB149;
+}
 
 /*
 * Stora element
@@ -152,6 +170,32 @@ article{
 */
 
 @media screen and (max-width:480px){
+  nav>ul {
+		display: none;
+	}
+	/*Create vertical spacing*/
+	nav>li {
+		margin-bottom: 1px;
+	}
+	/*Make all menu links full width*/
+	nav>ul li, nav>li a {
+		width: 100%;
+	}
+  a:hover{
+      background-color: #FF7D49;
+  }
+	.show-menu {
+		display:block;
+    width: 105%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+	}
+  .active {
+  background-color:#FFB149;
+  }
+
   #wrapper>nav{
     width: 95%;
   }
