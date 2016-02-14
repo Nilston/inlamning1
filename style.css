@@ -38,7 +38,6 @@ h3{
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
     background-color: #FFB149;
 }
 
@@ -95,6 +94,7 @@ article>img{
 #welcome{
   height: 10%;
 }
+
 /*
 * Stora element
 */
@@ -151,9 +151,66 @@ article{
   Här skiver ni generella egenskaper
 */
 
-@media screen and(max-width:479px){
-  body{
-    background-color: green;
+@media screen and (max-width:480px){
+  #wrapper>nav{
+    width: 95%;
+  }
+  #wrapper>#navigation{
+    width: 95%;
+  }
+  #wrapper>header{
+    margin-right: 10px;
+    width: 95%;
+  }
+  #wrapper>main{
+    margin-top: 15px;
+    border-top-left-radius: 20px;
+    height: 750px;
+  }
+  .art1{
+    width: 100%;
+    height: 30%;
+    padding-right: 30px;
+  }
+  #art2{
+    height: 30%;
+  }
+  #art1_margin{
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  .navbar{
+    width: 100%;
+  }
+  #welcome{
+    height: 5%;
+  }
+  li a {
+      text-align: left;
+      width: 80%;
+      text-decoration: none;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+  }
+  #list{
+    padding-top: 20px;
+    padding-left: 25px;
+    width: 100%;
+  }
+  select{
+    width: 80%;
+    height: 20px;
+  }
+
+  h1{
+    font-size: 25px;
+  }
+  h2{
+    font-size: 18px;
+  }
+  h3{
+    font-size: 12px;
   }
 }
 
@@ -184,6 +241,7 @@ article{
     margin-right: 20px;
     width: 75%;
     border-bottom-right-radius: 20px;
+    height: 750px;
   }
   select{
     padding-left: 5px;
@@ -193,6 +251,7 @@ article{
   }
   h2{
     font-size: 30px;
+    margin-bottom: 0;
   }
   h3{
     font-size: 20px;
@@ -200,6 +259,7 @@ article{
   header>h1{
     font-size: 20px;
   }
+
   header>h3{
     font-size: 10px;
   }
@@ -217,9 +277,9 @@ article{
   }
   #wrapper>footer{
     position: fixed;
-    min-width: 190px;
+    min-width: 192px;
     width: 19.2%;
-    top: 59.5%;
+    top: 69.3%;
     float: left;
     border-bottom-right-radius: 0;
     border-top-left-radius:20px;
@@ -231,6 +291,17 @@ article{
     box-shadow: 0;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
+}
+  .art1{
+    padding-right: 30px;
+    height: 52%;
+  }
+  #art2{
+    height: 38%;
+  }
+  #listlabel{
+      margin-top: 20px;
+  }
 }
 
 @media screen and (min-width: 1025px){
