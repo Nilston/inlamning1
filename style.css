@@ -68,13 +68,15 @@ select{
 figure{
   margin: 0;
   display: block;
-  max-width: 50%;
-  background-color: lightyellow;
+  box-sizing: border-box;
+  max-width:47%;
+  background-color: #53C594;
   float: left;
   box-sizing: border-box;
-  border: 1px solid #021a40;
-  border-radius: 40px;
+  border: 1px solid #53C594;
+  border-radius: 20px;
   padding: 12px;
+  margin: 10px;
 }
 figcaption{
   text-align: center;
@@ -85,6 +87,8 @@ figure>img{
   width:100%;
   height: auto\9;
   width: auto\9; /* ie8 */
+  border-radius: 20px;
+
 }
 article>img{
   max-width: 20%;
@@ -158,12 +162,13 @@ nav{
 }
 main{
   text-align: center;
+  float: left;
   background-color: #32B07A;
   padding-bottom: 15px;
   padding: 20px;
-  height: 750px;
+  height: auto;
+  overflow: hidden;
   border-top-right-radius: 20px;
-  border-top-left-radius: 0;
 }
 
 footer{
@@ -228,9 +233,9 @@ article{
     width: 95%;
   }
   #wrapper>main{
-    margin-top: 15px;
+    margin-top: 2%;
+    border-top-right-radius: 20px;
     border-top-left-radius: 20px;
-    height: 750px;
   }
   .art1{
     width: 100%;
@@ -249,6 +254,7 @@ article{
   }
   #welcome{
     height: 5%;
+    overflow: hidden;
   }
   li a {
       text-align: left;
@@ -268,7 +274,8 @@ article{
     height: 20px;
   }
   figure{
-    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
   }
 
   h1{
@@ -285,10 +292,10 @@ article{
 @media screen and (min-width: 480px) and (max-width: 1024px){
 
   #wrapper>nav{
-    position: fixed;
+    position: absolute;
     width: 20%;
     min-width: 192px;
-    top: 19%;
+    top: 18%;
 
   }
 
@@ -303,11 +310,10 @@ article{
   }
 
   #wrapper>main{
-    position: fixed;
-    overflow: scroll;
+    position: absolute;
     left: 200px;
+    right: 0px;
     margin-right: 20px;
-    overflow: hidden;
     width: auto;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
@@ -319,7 +325,6 @@ article{
   h1{
     font-size: 40px;
     width: auto;
-    overflow: hidden;
   }
   h2{
     font-size: 30px;
@@ -348,7 +353,7 @@ article{
     width: auto;
   }
   #wrapper>footer{
-    position: fixed;
+    position: absolute;
     min-width: 192px;
     width: 18%;
     top: 67%;
@@ -357,7 +362,7 @@ article{
     border-top-right-radius: 20px;
   }
   #wrapper>header{
-    position: fixed;
+    position: absolute;
     min-width: 200px;
     width: 18%;
     box-shadow: 0;
@@ -373,6 +378,10 @@ article{
   }
   #listlabel{
       margin-top: 20px;
+  }
+  figure{
+    max-width: 46%;
+    float: left;
   }
 }
 
