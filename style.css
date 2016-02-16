@@ -169,6 +169,7 @@ main{
   height: auto;
   overflow: hidden;
   border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
 }
 
 footer{
@@ -238,9 +239,10 @@ article{
     border-top-left-radius: 20px;
   }
   .art1{
-    width: 100%;
+    width: auto;
     height: 30%;
     padding-right: 30px;
+
   }
   #art2{
     height: 30%;
@@ -316,7 +318,8 @@ article{
     margin-right: 10px;
     width: auto;
     border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
+    border-bottom-left-radius:20px;
+    border-top-left-radius: 0;
     height:auto;
   }
   select{
@@ -380,7 +383,7 @@ article{
       margin-top: 20px;
   }
   figure{
-    max-width: 46%;
+    max-width: 42%;
     box-sizing: border-box;
     float: left;
   }
