@@ -8,6 +8,7 @@ document.querySelector(".testSelect").addEventListener("change", function(){
     document.querySelector("header").style.backgroundColor = "#FDFCFC";
     document.querySelector("#navigation").style.backgroundColor = "#7A7474";
     document.querySelector("main").style.backgroundColor = "#A3A0A0";
+
     document.querySelector("footer").style.backgroundColor = "#A3A0A0";
     localStorage.setItem("colorbody", "#CDCBCB");
     localStorage.setItem("colorheader","#FDFCFC" );
@@ -63,3 +64,63 @@ if(localStorage.getItem("colorbody") != undefined){
   document.querySelector("#navigation").style.backgroundColor = localStorage.getItem("colornavigation");
   document.querySelector("main").style.backgroundColor = localStorage.getItem("colormain");
 }
+
+(function() {
+
+	function Slideshow( element ) {
+		this.el = document.querySelector( element );
+		this.init();
+	}
+
+	Slideshow.prototype = {
+		init: function() {
+			this.wrapper = this.el.querySelector( ".slider-wrapper" );
+			this.slides = this.el.querySelectorAll( ".slide" );
+			this.index = 0;
+			this.total = this.slides.length;
+			this.timer = null;
+
+			this.action();
+		},
+		_slideTo: function( slide ) {
+			var currentSlide = this.slides[slide];
+			currentSlide.style.opacity = 1;
+
+			for( var i = 0; i < this.slides.length; i++ ) {
+				var slide = this.slides[i];
+				if( slide !== currentSlide ) {
+					slide.style.opacity = 0;
+				}
+
+			}
+		},
+		action: function() {
+			var self = this;
+			self.timer = setInterval(function() {
+				self.index++;
+        document.getElementById("bildtext").innerHTML = "Bild " + self.index + "/3";
+				if( self.index == self.slides.length ) {
+					self.index = 0;
+				}
+				self._slideTo( self.index );
+
+			}, 3000);
+		},
+	};
+
+	document.addEventListener( "DOMContentLoaded", function() {
+
+		var slider = new Slideshow( "#main-slider" );
+
+	});
+
+
+})();
+
+var nav = document.getElementById('access_nav'),
+    body = document.body;
+
+nav.addEventListener('click', function(e) {
+    body.className = body.className? '' : 'with_nav';
+    e.preventDefault();
+});
