@@ -1,82 +1,63 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <link href="style.css" type="text/css" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
-    <meta name="viewport" content="initial-scale=1, width=device-width">
-    <title>Anton Nilsson - Din dröm - Min verklighet</title>
-  </head>
-  <body>
-      <!-- TODO:
-        Startsida:
-        Utformad för mobil, tablet och desktop.
-        Byt stil på sidan
-        Offline-sida
-        Ihopfällbar mobilmeny
-        <header>
-        <footer>
-        <section>
-        <article>
-        <figure>
-        Figursida:
-        Denna sida ska presentera minst 4st figurer som ska lägga sig på olika sätt,
-        beroende på vilken enhet som man surfar in på.
+<head>
+  <meta charset="utf-8">
+  <link href="style.css" type="text/css" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
+  <meta name="viewport" content="initial-scale=1, width=device-width">
+  <title>Anton Nilsson - Din dröm - Min verklighet</title>
+</head>
+<body>
+  <!-- Figurer-htmln representerar figurersidan på hemsidan. -->
+<div id="wrapper">
+  <header>
+    <h1>Antons Inlämnings-uppgift</h1>
+    <h3>Underrubrik med sting.</h3>
+  </header>
+  <nav id="nav">
+    <a id="menu" href="#footer_nav" onclick="toggleNav(); return false;">&#9776; MENU</a>
+    <ul id="navigation" role="navigation">
+      <li class="navbar"><a href="index.html">Hem </a></li>
+      <li class="navbar"><a class="active" href="figurer.html">Figurer</a></li>
+      <li class="navbar"><a href="bildspel.html">Bildspel</a></li>
+      <li id="list"> <p id="listlabel"> Välj tema för sidan:  </p>
+        <select class="testSelect">
+          <option value="standard">Standard</option>
+          <option value="atomic">Atomic Waste</option>
+          <option value="yellow">Flowery Yellow</option>
+          <option value="grey">Industry Grey</option>
+        </select>
+      </li>
+    </ul>
+  </nav>
+  <!-- Här följer figurerna. -->
+  <main>
+    <a href="https://en.wikipedia.org/wiki/Rey_%28Star_Wars%29">
+      <figure id="extra" ><img id="rey" src="http://cdn.collider.com/wp-content/uploads/2015/11/star-wars-force-awakens-poster-rey-daisy-ridley-hi-res.jpg" alt="Rey" ></img>
+        <figcaption>Rey</figcaption>
+      </figure>
+    </a>
+    <a href="https://sv.wikipedia.org/wiki/Kylo_Ren">
+      <figure><img src="http://cdn.collider.com/wp-content/uploads/2015/11/star-wars-force-awakens-kylo-ren-adam-driver-poster-hi-res.jpg" alt="Kylo Ren"></img>
+        <figcaption>Kylo Ren</figcaption>
+      </figure>
+    </a>
+    <a href="https://sv.wikipedia.org/wiki/Han_Solo">
+      <figure><img src="http://cdn.collider.com/wp-content/uploads/2015/11/star-wars-force-awakens-han-solo-harrison-ford-poster-hi-res.jpg"></img>
+        <figcaption>Han Solo</figcaption>
+      </figure>
+    </a>
 
-        Allt ska se ut på samma sätt som på http://mah-dv.github.io/courses/da344a-da355a/assignments/as1.html
-
-        -->
-        <div id="wrapper">
-            <header>
-              <h1>Antons Inlämnings-uppgift</h1>
-              <h3>Underrubrik med sting.</h3>
-            </header>
-            <nav id="nav">
-              <a id="menu" href="#footer_nav" onclick="toggleNav(); return false;">&#9776; MENU</a>
-              <ul id="navigation" role="navigation">
-                <li class="navbar"><a href="index.html">Hem </a></li>
-                <li class="navbar"><a class="active" href="figurer.html">Figurer</a></li>
-                <li class="navbar"><a href="bildspel.html">Bildspel</a></li>
-                <li id="list"> <p id="listlabel"> Välj tema för sidan:  </p>
-                <select class="testSelect">
-                  <option value="standard">Standard</option>
-                  <option value="atomic">Atomic Waste</option>
-                  <option value="yellow">Flowery Yellow</option>
-                  <option value="grey">Industry Grey</option>
-                </select>
-              </li>
-              </ul>
-            </nav>
-            <main>
-              <a href="https://en.wikipedia.org/wiki/Rey_%28Star_Wars%29">
-                <figure id="extra" ><img id="rey" src="http://cdn.collider.com/wp-content/uploads/2015/11/star-wars-force-awakens-poster-rey-daisy-ridley-hi-res.jpg" alt="Rey" ></img>
-                  <figcaption>Rey</figcaption>
-                </figure>
-              </a>
-              <a href="https://sv.wikipedia.org/wiki/Kylo_Ren">
-                <figure><img src="http://cdn.collider.com/wp-content/uploads/2015/11/star-wars-force-awakens-kylo-ren-adam-driver-poster-hi-res.jpg" alt="Kylo Ren"></img>
-                  <figcaption>Kylo Ren</figcaption>
-                </figure>
-              </a>
-              <a href="https://sv.wikipedia.org/wiki/Han_Solo">
-                <figure><img src="http://cdn.collider.com/wp-content/uploads/2015/11/star-wars-force-awakens-han-solo-harrison-ford-poster-hi-res.jpg"></img>
-                <figcaption>Han Solo</figcaption>
-                </figure>
-              </a>
-
-            <a href="https://en.wikipedia.org/wiki/BB-8">
-              <figure><img src="http://cdn.wegotthiscovered.com/wp-content/uploads/BB81.jpg" alt="BB-8"></img>
-                <figcaption>BB8</figcaption>
-              </figure>
-            </a>
-          </main>
-          <footer>
-            Skapad av Anton Nilsson
-          </footer>
-        </div>
-        <!-- Länkar in jQuery -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-        <!-- Länkar in vår egna JavaScript-fil -->
-        <script src="script.js"></script>
-  </body>
+    <a href="https://en.wikipedia.org/wiki/BB-8">
+      <figure><img src="http://cdn.wegotthiscovered.com/wp-content/uploads/BB81.jpg" alt="BB-8"></img>
+        <figcaption>BB8</figcaption>
+      </figure>
+    </a>
+  </main>
+  <footer>
+    Skapad av Anton Nilsson
+  </footer>
+</div>
+<script src="script.js"></script>
+</body>
 </html>

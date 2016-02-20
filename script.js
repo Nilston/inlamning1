@@ -1,3 +1,6 @@
+// Här inne hittar man alla skript som används på hemsidan.
+
+//Här är localStorage-delen.
 document.querySelector(".testSelect").addEventListener("change", function(){
   console.log("hej");
   var e = document.querySelector(".testSelect");
@@ -65,65 +68,69 @@ if(localStorage.getItem("colorbody") != undefined){
   document.querySelector("main").style.backgroundColor = localStorage.getItem("colormain");
 }
 
+// Här följer scriptet för bildspelet.
+
+
 (function() {
 
-	function Slideshow( element ) {
-		this.el = document.querySelector( element );
-		this.init();
-	}
+  function Slideshow( element ) {
+    this.el = document.querySelector( element );
+    this.init();
+  }
 
-	Slideshow.prototype = {
-		init: function() {
-			this.wrapper = this.el.querySelector( ".slider-wrapper" );
-			this.slides = this.el.querySelectorAll( ".slide" );
-			this.index = 0;
-			this.total = this.slides.length;
-			this.timer = null;
+  Slideshow.prototype = {
+    init: function() {
+      this.wrapper = this.el.querySelector( ".slider-wrapper" );
+      this.slides = this.el.querySelectorAll( ".slide" );
+      this.index = 0;
+      this.total = this.slides.length;
+      this.timer = null;
 
-			this.action();
-		},
-		_slideTo: function( slide ) {
-			var currentSlide = this.slides[slide];
-			currentSlide.style.opacity = 1;
+      this.action();
+    },
+    _slideTo: function( slide ) {
+      var currentSlide = this.slides[slide];
+      currentSlide.style.opacity = 1;
 
-			for( var i = 0; i < this.slides.length; i++ ) {
-				var slide = this.slides[i];
-				if( slide !== currentSlide ) {
-					slide.style.opacity = 0;
-				}
+      for( var i = 0; i < this.slides.length; i++ ) {
+        var slide = this.slides[i];
+        if( slide !== currentSlide ) {
+          slide.style.opacity = 0;
+        }
 
-			}
-		},
-		action: function() {
-			var self = this;
-			self.timer = setInterval(function() {
-				self.index++;
+      }
+    },
+    action: function() {
+      var self = this;
+      self.timer = setInterval(function() {
+        self.index++;
         document.getElementById("bildtext").innerHTML = "Bild " + self.index + "/" + self.slides.length;
-				if( self.index == self.slides.length ) {
-					self.index = 0;
-				}
-				self._slideTo( self.index );
+        if( self.index == self.slides.length ) {
+          self.index = 0;
+        }
+        self._slideTo( self.index );
 
-			}, 3000);
-		},
-	};
+      }, 3000);
+    },
+  };
 
-	document.addEventListener( "DOMContentLoaded", function() {
+  document.addEventListener( "DOMContentLoaded", function() {
 
-		var slider = new Slideshow( "#main-slider" );
+    var slider = new Slideshow( "#main-slider" );
 
-	});
+  });
 
 
 })();
 
+// Här följer scriptet för dropdown-menyn på mobilsidan.
 var originalNavClasses;
 
 function toggleNav() {
-    var elem = document.getElementById('navigation');
-    var classes = elem.className;
-    if (originalNavClasses === undefined) {
-        originalNavClasses = classes;
-    }
-    elem.className = /expanded/.test(classes) ? originalNavClasses : originalNavClasses + ' expanded';
+  var elem = document.getElementById('navigation');
+  var classes = elem.className;
+  if (originalNavClasses === undefined) {
+    originalNavClasses = classes;
+  }
+  elem.className = /expanded/.test(classes) ? originalNavClasses : originalNavClasses + ' expanded';
 }

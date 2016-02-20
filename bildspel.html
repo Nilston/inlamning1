@@ -1,69 +1,49 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <link href="style.css" type="text/css" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
-    <meta name="viewport" content="initial-scale=1, width=device-width">
-    <title>Anton Nilsson - Din dröm - Min verklighet</title>
-  </head>
-  <body>
-      <!-- TODO:
-        Startsida:
-        Utformad för mobil, tablet och desktop.
-        Byt stil på sidan
-        Offline-sida
-        Ihopfällbar mobilmeny
-        <header>
-        <footer>
-        <section>
-        <article>
-        <figure>
-        Figursida:
-        Denna sida ska presentera minst 4st figurer som ska lägga sig på olika sätt,
-        beroende på vilken enhet som man surfar in på.
-
-        Allt ska se ut på samma sätt som på http://mah-dv.github.io/courses/da344a-da355a/assignments/as1.html
-
-        -->
-        <div id="wrapper">
-            <header>
-              <h1>Antons Inlämnings-uppgift</h1>
-              <h3>Underrubrik med sting.</h3>
-            </header>
-            <nav id="nav">
-              <a id="menu" href="#footer_nav" onclick="toggleNav(); return false;">&#9776; MENU</a>
-              <ul id="navigation" role="navigation">
-                <li class="navbar"><a href="index.html">Hem </a></li>
-                <li class="navbar"><a href="figurer.html">Figurer</a></li>
-                <li class="navbar"><a class="active"href="bildspel.html">Bildspel</a></li>
-                <li id="list"> <p id="listlabel"> Välj tema för sidan:  </p>
-                <select class="testSelect">
-                  <option value="standard">Standard</option>
-                  <option value="atomic">Atomic Waste</option>
-                  <option value="yellow">Flowery Yellow</option>
-                  <option value="grey">Industry Grey</option>
-                </select>
-              </li>
-              </ul>
-            </nav>
-            <main id="bildspelmain">
-              <h1 id="bildtext">Bild 3/3</h1>
-              <div class="slider" id="main-slider"><!-- outermost container element -->
-                <div class="slider-wrapper"><!-- innermost wrapper element -->
-                  <img src="7.jpg" alt="Han Solo" class="slide" /><!-- slides -->
-                  <img src="8.jpg" alt="Force Awakens" class="slide" />
-                  <img src="9.jpg" alt="Fin bild" class="slide" />
-                </div>
-              </div>
-            </main>
-          <footer id="bildspelfooter">
-            Skapad av Anton Nilsson
-          </footer>
+<head>
+  <meta charset="utf-8">
+  <link href="style.css" type="text/css" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
+  <meta name="viewport" content="initial-scale=1, width=device-width">
+  <title>Anton Nilsson - Din dröm - Min verklighet</title>
+</head>
+<body>
+  <!--Bildspels html. Representerar bildspelssidan på hemsidan.-->
+  <div id="wrapper">
+    <header>
+      <h1>Antons Inlämnings-uppgift</h1>
+      <h3>Underrubrik med sting.</h3>
+    </header>
+    <nav id="nav">
+      <a id="menu" href="#footer_nav" onclick="toggleNav(); return false;">&#9776; MENU</a>
+      <ul id="navigation" role="navigation">
+        <li class="navbar"><a href="index.html">Hem </a></li>
+        <li class="navbar"><a href="figurer.html">Figurer</a></li>
+        <li class="navbar"><a class="active"href="bildspel.html">Bildspel</a></li>
+        <li id="list"> <p id="listlabel"> Välj tema för sidan:  </p>
+          <select class="testSelect">
+            <option value="standard">Standard</option>
+            <option value="atomic">Atomic Waste</option>
+            <option value="yellow">Flowery Yellow</option>
+            <option value="grey">Industry Grey</option>
+          </select>
+        </li>
+      </ul>
+    </nav>
+    <main id="bildspelmain">
+      <h1 id="bildtext">Bild 3/3</h1>
+      <div class="slider" id="main-slider">
+        <div class="slider-wrapper">
+          <img src="7.jpg" alt="Count Douku" class="slide" />
+          <img src="8.jpg" alt="Luke Skywalker" class="slide" />
+          <img src="9.jpg" alt="Darth Vader" class="slide" />
         </div>
-        <!-- Länkar in jQuery -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-        <!-- Länkar in vår egna JavaScript-fil -->
-        <script src="script.js"></script>
-  </body>
+      </div>
+    </main>
+    <footer id="bildspelfooter">
+      Skapad av Anton Nilsson
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
 </html>
