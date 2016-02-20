@@ -98,7 +98,7 @@ if(localStorage.getItem("colorbody") != undefined){
 			var self = this;
 			self.timer = setInterval(function() {
 				self.index++;
-        document.getElementById("bildtext").innerHTML = "Bild " + self.index + "/3";
+        document.getElementById("bildtext").innerHTML = "Bild " + self.index + "/" + self.slides.length;
 				if( self.index == self.slides.length ) {
 					self.index = 0;
 				}
@@ -117,10 +117,13 @@ if(localStorage.getItem("colorbody") != undefined){
 
 })();
 
-var nav = document.getElementById('access_nav'),
-    body = document.body;
+var originalNavClasses;
 
-nav.addEventListener('click', function(e) {
-    body.className = body.className? '' : 'with_nav';
-    e.preventDefault();
-});
+function toggleNav() {
+    var elem = document.getElementById('navigation');
+    var classes = elem.className;
+    if (originalNavClasses === undefined) {
+        originalNavClasses = classes;
+    }
+    elem.className = /expanded/.test(classes) ? originalNavClasses : originalNavClasses + ' expanded';
+}

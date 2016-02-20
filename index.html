@@ -31,10 +31,9 @@
               <h1>Antons Inlämnings-uppgift</h1>
               <h3>Underrubrik med sting.</h3>
             </header>
-            <nav>
-              <label for="show-menu" class="show-menu">Meny</label>
-              <input type="checkbox" id="show-menu" role="button">
-              <ul id="navigation">
+            <nav id="nav">
+              <a id="menu" href="#footer_nav" onclick="toggleNav(); return false;">&#9776; MENU</a>
+              <ul id="navigation" role="navigation">
                 <li class="navbar"><a class="active" href="index.html">Hem </a></li>
                 <li class="navbar"><a href="figurer.html">Figurer</a></li>
                 <li class="navbar"><a href="bildspel.html">Bildspel</a></li>
@@ -48,6 +47,7 @@
               </li>
               </ul>
             </nav>
+
           <main id="huvudmain">
             <div id="welcome">
               <h1>Välkommen till min sida!</h1>
