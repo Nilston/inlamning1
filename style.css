@@ -425,7 +425,6 @@ article{
     position: absolute;
     min-width: 200px;
     width: 18%;
-    box-shadow: 0;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }

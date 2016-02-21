@@ -2,7 +2,6 @@
 
 //Här är localStorage-delen.
 document.querySelector(".testSelect").addEventListener("change", function(){
-  console.log("hej");
   var e = document.querySelector(".testSelect");
   var color = e.options[e.selectedIndex].value;
   console.log(color);
